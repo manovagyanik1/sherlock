@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { reduxReducers } from './reducers/index';
 import { reduxMiddleware } from './utils/middleware';
 
-import Base from './components/base/index';
+import Base from './components/base/base';
 import Home from './pages/home/home';
 import Tasker from './pages/tasker/tasker';
 import Asker from './pages/asker/asker';

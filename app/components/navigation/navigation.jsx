@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuItem from '../menu-item/index';
 import { Link } from 'react-router';
 
 const links = [

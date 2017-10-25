@@ -1,6 +1,6 @@
 import {Actions} from './actions';
 import Gen from './utils/gen';
-import * as Constants from './constants';
+import * as Constants from './utils/constants';
 
 const errorFunc = (errorAction, dispatch) => (err) => {
 	Gen.log(err);

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../header/index';
-import Footer from '../footer/index';
-import Navigation from '../navigation/index';
+import Header from '../header/header';
+import Footer from '../footer/footer';
+import Navigation from '../navigation/navigation';
 
 export default class Base extends React.Component {
   static propTypes = {

@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
-import {ActionTypes} from './actions';
-import Gen from './utils/gen';
-import Constants from './constants';
+import {ActionTypes} from '../actions/actions';
+import Gen from '../utils/gen';
+import Constants from '../utils/constants';
 
 const initialState = {
   likes: {},

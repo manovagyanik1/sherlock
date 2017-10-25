@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../../components/button/index';
+import Button from '../../components/button/button';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../actions/actions';
 
-class NotFoundPage extends React.Component {
+class NotFound extends React.Component {
   static propTypes = {
     gifs: React.PropTypes.array,
     actions: React.PropTypes.object
@@ -35,13 +35,13 @@ class NotFoundPage extends React.Component {
   }
 }
 
-mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     gifs: state.rootReducer.gifs
   };
 }
 
-mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return Object.assign({}, {
     actions: bindActionCreators(actions, dispatch)
   });
@@ -50,4 +50,4 @@ mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NotFoundPage);
+)(NotFound);

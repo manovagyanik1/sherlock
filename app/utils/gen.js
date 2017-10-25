@@ -1,4 +1,4 @@
-import {USER_TOKEN, PLAY_STORE_URL, USER_ID} from '../constants';
+import {USER_TOKEN, PLAY_STORE_URL, USER_ID} from './constants';
 
 export default class Gen {
 

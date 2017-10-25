@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../components/button/index';
+import Button from '../../components/button/button';
 import CircularImage from '../../components/circularImage/circularImage';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../actions/actions';
 
 const pageId = 2;
 
@@ -34,13 +34,13 @@ class Home extends React.Component {
   }
 }
 
-mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     likes: state.rootReducer.likes[pageId]
   };
 }
 
-mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return Object.assign({}, {
     actions: bindActionCreators(actions, dispatch)
   });

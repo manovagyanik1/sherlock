@@ -10,7 +10,7 @@ gulp.task('development', ['reset-build-directory'], (callback) => {
     'browserify',
     'copy-fonts-to-build-directory',
     'copy-index-html-to-build-directory',
-    'copy-icons-to-build-directory',
+    // 'copy-icons-to-build-directory',
     'eslint'
   ], 'watch', callback);
 });
