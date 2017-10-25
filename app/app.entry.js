@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import { reduxReducers } from './reducers/index';
-import { reduxMiddleware } from './utilities/middleware';
+import { reduxMiddleware } from './utils/middleware';
 
 import Base from './components/base/index';
-import OneExamplePage from './pages/one/index';
-import TwoExamplePage from './pages/two/index';
-import NotFoundPage from './pages/not-found/index';
+import Home from './pages/home/home';
+import Tasker from './pages/tasker/tasker';
+import Asker from './pages/asker/asker';
+import NotFound from './pages/notFound/notFound';
 
 const store = reduxMiddleware.createStore(reduxReducers);
 
@@ -21,10 +22,10 @@ ReactDOM.render(
   <Provider store={ store }>
     <Router history={ reduxMiddleware.history }>
       <Route path="/" component={ Base }>
-        <IndexRoute component={ OneExamplePage } />
-        <Route path="one" component={ OneExamplePage } />
-        <Route path="two" component={ TwoExamplePage } />
-        <Route path="*" component={ NotFoundPage } />
+        <IndexRoute component={ Home } />
+        <Route path="tasker" component={ Tasker } />
+        <Route path="asker" component={ Asker } />
+        <Route path="*" component={ NotFound } />
       </Route>
     </Router>
   </Provider>,

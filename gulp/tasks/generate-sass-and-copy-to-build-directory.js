@@ -4,7 +4,7 @@ import sass from 'gulp-sass';
 import gulpIf from 'gulp-if';
 import browserSync from 'browser-sync';
 import autoPrefixer from 'gulp-autoprefixer';
-import handleErrors from '../utilities/error-handler';
+import handleErrors from '../utils/error-handler';
 import config from '../config';
 import insert from 'gulp-insert';
 import glob from 'glob';

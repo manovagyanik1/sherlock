@@ -14,6 +14,10 @@ html {
   font-size: 16px;
 }
 
+a {
+  color: #039be5
+}
+
 dfn {
   text-decoration: none;
   font-style: normal;
@@ -29,3 +33,32 @@ button, select, input {
     border: 0;
   }
 }
+
+ul.amazon-crp-inline-list {
+  padding: 0;
+  margin: 0
+}
+
+ul.amazon-crp-inline-list>li {
+  display: inline-block
+}
+
+ul.amazon-crp-inline-list>li:not(:first-child ){
+  margin-left: 10px
+}
+
+ul.amazon-crp-inline-list>li:not(:last-child ):not(.indicator ){
+  padding-right: 15px;
+  border-right: 1px solid #999
+}
+
+.amazon-crp-bar {
+  color: #d5d7d9;
+  padding: 15px 0;
+  margin-bottom: 15px
+}
+
+.amazon-crp-bar ul.amazon-crp-inline-list>li:not(:last-child):not(.indicator){
+  border-right: 1px solid #fff
+}
+

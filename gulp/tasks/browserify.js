@@ -11,7 +11,7 @@ import babelify from 'babelify';
 import uglify from 'gulp-uglify';
 import browserSync from 'browser-sync';
 import debowerify from 'debowerify';
-import handleErrors from '../utilities/error-handler';
+import handleErrors from '../utils/error-handler';
 import config from '../config';
 
 function buildScript(file, watch) {

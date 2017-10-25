@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { rootReducer } from './root-reducer';
+import { rootReducer } from './rootReducer';
 import { routeReducer } from 'react-router-redux';
 
 export const reduxReducers = combineReducers({

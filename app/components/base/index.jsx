@@ -11,9 +11,6 @@ export default class Base extends React.Component {
   render() {
     return (
       <section className="base">
-        <section className="base-left">
-          <Navigation />
-        </section>
         <section className="base-right">
           <Header />
           {this.props.children}

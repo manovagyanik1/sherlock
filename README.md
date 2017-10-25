@@ -1,3 +1,13 @@
+# Pages
+
+- Tasker
+    - html, keywords, questions. templateId
+- Asker
+- Ops manager
+
+
+
+
 # Dough
 
 A starting point for a static JavaScript application. Ideal for projects that just require hosting off of Amazon S3. Includes development and production NPM scripts, an easy to understand folder hierarchy, and example code to get started quickly.
