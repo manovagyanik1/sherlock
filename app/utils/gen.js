@@ -15,16 +15,16 @@ export default class Gen {
 	}
 
 	static getBaseUrl() {
-		return Gen.isDevelopment() ? 'https://sherlock-clicks.amazon.com/' : 'https://sherlock-clicks.amazon.com/';
+		return Gen.isDevelopment() ? 'https://sherlock-clicks.amazon.com' : 'https://sherlock-clicks.amazon.com';
 	}
 
-    static getBodyAuthHeader({token}) {
+    static getBodyAuthHeader() {
         return {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-                authorization: token,
+                // authorization: token,
             }
         };
     }
@@ -40,5 +40,9 @@ export default class Gen {
             body: JSON.stringify(postData),
         };
         return postBody;
+    }
+
+    static log(data) {
+	    console.log(data);
     }
 }

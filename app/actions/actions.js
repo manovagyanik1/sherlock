@@ -33,7 +33,14 @@ export function fetchData() {
 }
 
 export const ActionTypes = {
-  REQUEST_FEED: "request_feed",
+    REQUEST_REVIEW_TEMPLATE: "request_review_template",
+    RECEIVE_REVIEW_TEMPLATE: "receive_review_template",
+    REQUEST_REVIEW_TEMPLATES: "request_review_templates",
+    RECEIVE_REVIEW_TEMPLATES: "receive_review_templates",
+    REQUEST_REVIEW_QUESTIONS: "request_review_questions",
+    RECEIVE_REVIEW_QUESTIONS: "receive_review_questions",
+    REQUEST_REVIEW_TASKS: "request_review_tasks",
+    RECEIVE_REVIEW_TASKS: "receive_review_tasks",
   RECEIVE_FEED: "receive_feed",
   ERROR_FEED: "error_feed",
   REQUEST_COMMENTS: "request_comments",
@@ -90,10 +97,50 @@ export class Actions {
       type: ActionTypes.ERROR_COMMENTS,
   });
 
-  static requestFeed = ({nextPageUrl}) => ({
-      nextPageUrl,
-      type: ActionTypes.REQUEST_FEED
+  static requestReviewTemplate = ({reviewProgram, reviewTemplateId}) => ({
+      reviewProgram,
+      reviewTemplateId,
+      type: ActionTypes.REQUEST_REVIEW_TEMPLATE
   });
+
+    static receiveReviewTemplate = ({reviewTemplate}) => ({
+        reviewTemplate,
+        type: ActionTypes.RECEIVE_REVIEW_TEMPLATE
+    });
+
+    static requestReviewTemplates = ({reviewProgram}) => ({
+        reviewProgram,
+        type: ActionTypes.REQUEST_REVIEW_TEMPLATES
+    });
+
+    static receiveReviewTemplates = ({reviewTemplates}) => ({
+        reviewTemplates,
+        type: ActionTypes.RECEIVE_REVIEW_TEMPLATES
+    });
+
+    static requestReviewQuestions = ({reviewTemplateId, reviewProgram}) => ({
+        reviewTemplateId,
+        reviewProgram,
+        type: ActionTypes.REQUEST_REVIEW_QUESTIONS
+    });
+
+    static receiveReviewQuestions = (reviewQuestions) => ({
+        reviewQuestions,
+        type: ActionTypes.RECEIVE_REVIEW_QUESTIONS
+    });
+
+    static requestReviewTasks = ({reviewTemplateId, reviewProgram}) => ({
+        reviewTemplateId,
+        reviewProgram,
+        type: ActionTypes.REQUEST_REVIEW_TASKS
+    });
+
+    static receiveReviewTasks = (reviewQuestions) => ({
+        reviewQuestions,
+        type: ActionTypes.RECEIVE_REVIEW_TASKS
+    });
+
+
 
   static requestComments = ({nextPageUrl}) => ({
       nextPageUrl,

@@ -1,4 +1,20 @@
-.pageNotFound {
-    padding: 24px;
+.home {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content:center;
+  align-items: center;
+
+  .header {
+    font-size: 20px;
+    color: #333333;
+    background: white;
+    margin-top: 25px;
+    }
+
+  .section-links{
+    margin-top: 50px;
+  }
+
   }
   

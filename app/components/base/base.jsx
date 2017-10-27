@@ -11,11 +11,11 @@ export default class Base extends React.Component {
   render() {
     return (
       <section className="base">
-        <section className="base-right">
           <Header />
+          <div className="expand">
           {this.props.children}
+          </div>
           <Footer />
-        </section>
       </section>
     );
   }

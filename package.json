@@ -57,6 +57,8 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "merge-stream": "^1.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",

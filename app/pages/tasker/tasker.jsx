@@ -1,12 +1,22 @@
 import React from 'react';
 import Button from '../../components/button/button';
 import CircularImage from '../../components/circularImage/circularImage';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/actions';
+import Select from 'react-select';
+import Gen from "../../utils/gen";
 
-const pageId = 2;
+const options = [
+    { value: 'SPONSERED_PRODUCTS', label: 'Sponsored Products' },
+    { value: 'AD_FEEDBACK', label: 'Ad Feedback' },
+    { value: 'AMAZON_MARKETING_SERVICES', label: 'Amazon Marketing Services' },
+    { value: 'QUALITY_COMPLIANCE_REVIEW', label: 'Quality Compliance Review' },
+    { value: 'CATALOG_QUALITY', label: 'Catalog Quality' },
+    { value: 'AMAZON_LIVE', label: 'Amazon Live' },
+    { value: 'ASSOCIATES_PROCESS', label: 'Associates Process' },
+    { value: 'CUSTOM', label: 'Custom' }
+];
 
 class Tasker extends React.Component {
   static propTypes = {
@@ -14,21 +24,32 @@ class Tasker extends React.Component {
     actions: React.PropTypes.object
   };
 
-  handleLike = () => {
-    return this.props.actions.likePostById(pageId);
+  onChange = (value) => {
+    Gen.log(value);
+
   }
 
   render() {
-    const { likes } = this.props;
-    const likeCount = likes ? likes : 0;
-
     return (
-      <div className="pageTwo">
-        <CircularImage imageUrl='https://badgephotos.amazon.com/?uid=shubhagr' description='welcome shubhagr' />
-
-        <Button onClick={() => {this.handleLike()}}>
-          This post has {likeCount} likes.
-        </Button>
+      <div className="tasker">
+        <div className="review-program-selection-wrapper selection-wrapper">
+          <div className="header">Review Programs</div>
+          <Select
+            name="review-program-selection"
+            className="selection"
+            value="Select a program"
+            options={options}
+            onChange={this.onChange} />
+        </div>
+        <div className="review-template-selection-wrapper selection-wrapper">
+          <div className="header">Review Templates</div>
+          <Select
+              name="review-template-selection"
+              className="selection"
+              value="Select a template"
+              options={options}
+              onChange={this.onChange} />
+        </div>
       </div>
     );
   }
@@ -36,7 +57,7 @@ class Tasker extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    likes: state.rootReducer.likes[pageId]
+
   };
 }
 
